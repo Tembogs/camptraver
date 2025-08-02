@@ -24,3 +24,36 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@layer utilities {
+  .btn_white {
+    @apply border-white bg-white px-8 py-3 text-green-300
+  }
+  .btn_white_text {
+    @apply border-black bg-gray-500 px-8 py-3 text-gray-900
+  }
+  .btn_dark_green {
+    @apply bg-green-900 border-green-900 px-8 py-3 text-white transition-all hover:bg-black;
+  }
+  .btn_dark_green:hover {
+    @apply bg-black;
+  }
+  .btn_green {
+    @apply bg-green-500 px-8 py-3 border-green-500 text-white
+  }
+  .hero-map {
+    @apply absolute right-0 top-0 h-screen w-screen bg-cover bg-center md:-right-28 xl:-top-60
+  }
+   .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;    /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+ 
+
