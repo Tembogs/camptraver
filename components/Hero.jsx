@@ -40,6 +40,7 @@ const Hero = () => {
           type='button'
           title='Download App'
           variant='btn_green'
+        
           />
 
           <Button

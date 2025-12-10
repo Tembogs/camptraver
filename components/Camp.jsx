@@ -1,4 +1,5 @@
 import { People } from "@/constant"
+
 import Image from "next/image"
 
 
@@ -7,13 +8,16 @@ const Campsite = ({backgroundImage, title, subtitle, peoplejoined}) => {
     <div className={`overflow-x-auto whitespace-nowrap className="min-w-[300px] flex-shrink-0" h-full w-full min-w[2500px] ${backgroundImage} bg-cover bg-no-repeat lg:rounded-4xl 2xl:rounded-5xl`}>
       <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20">
         <div className="flex gap-4 -mx-15 ">
-          <div className="rounded-full bg-[#00B4D8]  p-4 ">
-             <Image
-             src='/globe.svg'
-             alt="wind"
-             width={28}
-             height={28}/>
-          </div>
+              <div className="rounded-full bg-[#00B4D8] bounceInDown p-4 ">
+                <Image
+                src='/globe.svg'
+                alt="wind"
+                width={28}
+                height={28}/>
+              </div>
+           
+
+            
           <div className="flex flex-col gap-1">
             <h4 className="font-bold ">{title}</h4>
             <p>{subtitle}</p>
@@ -42,7 +46,7 @@ const Campsite = ({backgroundImage, title, subtitle, peoplejoined}) => {
 
 const Camp = () => {
   return (
-    <section className='max-w-[1150px] 2xl:max-container mx-auto py-10 lg:mb-10 lg:py:20 xl:mb:20 flex flex-col relative'>
+    <section className='max-w-[1150px] 2xl:max-w-full mx-auto py-10 lg:mb-10 lg:py:20 xl:mb:20 flex flex-col relative'>
       <div className='hide-scrollbar flex h-[340px] w-full items-start justify-start gap-8 overflow-x-auto lg:h-[400px] xl:h-[640px]'>
        <Campsite
        backgroundImage="bg-[url('/camp1.jpeg')]"
